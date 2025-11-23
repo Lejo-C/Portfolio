@@ -114,7 +114,7 @@ export const Hero = () => {
                         Lejo C
                     </h1>
                     <h3 className="text-2xl md:text-4xl text-foreground/80 mb-8 font-light">
-                        Full Stack Developer <span className="text-primary">|</span> MERN <span className="text-primary">|</span> JavaScript
+                        Full Stack Developer <span className="text-primary">|</span> MERN
                     </h3>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
                         Love to learn new skills and build scalable solutions.
