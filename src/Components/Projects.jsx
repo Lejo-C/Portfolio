@@ -6,7 +6,7 @@ const Projects = () => {
     const projects = [
         {
             title: 'Exam Platform',
-            description: 'A modular exam creation and management system with user roles and analytics. Allows instructors to create exams and students to take them with real-time results.',
+            description: 'A modular exam creation and management system. Allows instructors to create exams and students to take them with real-time results.',
             tags: ['React', 'Node.js', 'MongoDB'],
             image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1000',
             github: 'https://github.com/Lejo-C/Online_Assignment_Platform',
