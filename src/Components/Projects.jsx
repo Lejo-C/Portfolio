@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import portfolio from '../assets/portfolio.png';
 
 const Projects = () => {
     const projects = [
@@ -19,6 +20,14 @@ const Projects = () => {
             image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=1000',
             github: 'https://github.com/Lejo-C/todoList',
             demo: 'https://todolist3027.netlify.app/',
+        },
+        {
+            title: 'Portfolio',
+            description: 'A simple Portfolio website built with React and Tailwind CSS for myself.',
+            tags: ['React', 'Tailwind CSS'],
+            image: portfolio,
+            github: 'https://github.com/Lejo-C/Portfolio',
+            demo: 'https://portfolio-lejo-c.netlify.app/',
         },
     ];
 
