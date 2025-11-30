@@ -2,6 +2,7 @@ import React from 'react';
 import Header, { Hero } from './Header';
 import About from './About';
 import Projects from './Projects';
+import Certifications from './Certifications';
 import Contact from './Contact';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
         <Hero />
         <About />
         <Projects />
+        <Certifications />
         <Contact />
       </main>
     </div>
