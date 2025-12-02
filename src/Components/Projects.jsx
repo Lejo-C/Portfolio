@@ -14,7 +14,7 @@ const Projects = () => {
             demo: 'https://online-assignment-platform.netlify.app/',
         },
         {
-            title: 'Todo List',
+            title: 'Expense Tracker',
             description: 'A simple yet powerful Income Expense Calculator with CRUD operations.',
             tags: ['HTML', 'CSS', 'JavaScript'],
             image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=1000',
