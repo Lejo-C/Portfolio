@@ -29,6 +29,14 @@ const Projects = () => {
             github: 'https://github.com/Lejo-C/Portfolio',
             demo: 'https://portfolio-lejo-c.netlify.app/',
         },
+        {
+            title: 'E-Commerce',
+            description: 'A E-Commerce website built with React, Tailwind CSS, Node.js, Mongo DB.',
+            tags: ['React', 'Node.js', 'Mongo DB', 'Tailwind CSS'],
+            image: 'https://media.licdn.com/dms/image/v2/D4D22AQFOVnVqxVz6dg/feedshare-shrink_1280/B4DZrqOA_PIEAo-/0/1764866134140?e=1766620800&v=beta&t=NveoX7RHUKXRCX4crrE-2NV79gZ17xu4u55demH_Mws',
+            github: 'https://github.com/Lejo-C/E-Commerce',
+            demo: 'https://e-commerce-iet3.onrender.com/',
+        },
     ];
 
     return (
