@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import portfolio from '../assets/portfolio.png';
+import ncc from '../assets/ncc.png';
 
 const Projects = () => {
     const projects = [
@@ -36,6 +37,14 @@ const Projects = () => {
             image: 'https://media.licdn.com/dms/image/v2/D4D22AQFOVnVqxVz6dg/feedshare-shrink_1280/B4DZrqOA_PIEAo-/0/1764866134140?e=1766620800&v=beta&t=NveoX7RHUKXRCX4crrE-2NV79gZ17xu4u55demH_Mws',
             github: 'https://github.com/Lejo-C/E-Commerce',
             demo: 'https://e-commerce-iet3.onrender.com/',
+        },
+        {
+            title: 'Ncc Portal',
+            description: 'A portal where we can manage our NCC activities.',
+            tags: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+            image: ncc,
+            github: 'https://github.com/Lejo-C/Ncc_Portal-/tree/master',
+            demo: 'https://ncc-portal.onrender.com/',
         },
     ];
 
