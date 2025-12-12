@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import portfolio from '../assets/portfolio.png';
-import ncc from '../assets/ncc.png';
+import ncc from '../assets/NCC.png';
 
 const Projects = () => {
     const projects = [
