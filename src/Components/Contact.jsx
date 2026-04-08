@@ -49,8 +49,8 @@ const Contact = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-                    <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+                    <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/50">Get In Touch</h2>
+                    <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-blue-500 mx-auto rounded-full blur-[1px] mb-6"></div>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
                         Have a project in mind or just want to say hi? Feel free to send me a message.
                     </p>
@@ -70,20 +70,20 @@ const Contact = () => {
                         </p>
 
                         <div className="space-y-6">
-                            <a href="mailto:lejo3027@gmail.com" className="flex items-center space-x-4 text-foreground/80 hover:text-primary transition-colors p-4 bg-card rounded-xl border border-border">
-                                <div className="bg-primary/10 p-3 rounded-full text-primary">
+                            <a href="mailto:lejo3027@gmail.com" className="flex items-center space-x-4 text-foreground/80 hover:text-primary transition-colors p-4 bg-card/50 backdrop-blur-md rounded-2xl border border-border/50 hover:bg-card/80 shadow-sm">
+                                <div className="bg-gradient-to-br from-primary/20 to-blue-500/20 p-3 rounded-xl text-primary shadow-inner">
                                     <Mail size={20} />
                                 </div>
                                 <span className="font-medium">lejo3027@gmail.com</span>
                             </a>
-                            <a href="https://www.linkedin.com/in/lejo-c" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 text-foreground/80 hover:text-primary transition-colors p-4 bg-card rounded-xl border border-border">
-                                <div className="bg-primary/10 p-3 rounded-full text-primary">
+                            <a href="https://www.linkedin.com/in/lejo-c" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 text-foreground/80 hover:text-primary transition-colors p-4 bg-card/50 backdrop-blur-md rounded-2xl border border-border/50 hover:bg-card/80 shadow-sm">
+                                <div className="bg-gradient-to-br from-primary/20 to-blue-500/20 p-3 rounded-xl text-primary shadow-inner">
                                     <Linkedin size={20} />
                                 </div>
                                 <span className="font-medium">LinkedIn Profile</span>
                             </a>
-                            <a href="https://github.com/Lejo-C" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 text-foreground/80 hover:text-primary transition-colors p-4 bg-card rounded-xl border border-border">
-                                <div className="bg-primary/10 p-3 rounded-full text-primary">
+                            <a href="https://github.com/Lejo-C" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 text-foreground/80 hover:text-primary transition-colors p-4 bg-card/50 backdrop-blur-md rounded-2xl border border-border/50 hover:bg-card/80 shadow-sm">
+                                <div className="bg-gradient-to-br from-primary/20 to-blue-500/20 p-3 rounded-xl text-primary shadow-inner">
                                     <Github size={20} />
                                 </div>
                                 <span className="font-medium">GitHub Profile</span>
@@ -96,8 +96,9 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                        className="bg-card p-8 rounded-2xl shadow-sm border border-border"
+                        className="bg-card/50 backdrop-blur-xl p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(var(--primary),0.05)] border border-border/50 relative overflow-hidden"
                     >
+                        <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl -z-10"></div>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             {/* FormSubmit.co Configuration */}
                             <input type="hidden" name="_subject" value="New submission from Portfolio!" />
@@ -132,7 +133,7 @@ const Contact = () => {
                                     name="message"
                                     required
                                     rows={4}
-                                    className="w-full px-4 py-3 rounded-lg bg-background border border-input focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
+                                    className="w-full px-5 py-4 rounded-xl bg-background/50 border border-input focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none backdrop-blur-sm"
                                     placeholder="Your message..."
                                 ></textarea>
                             </div>
@@ -140,7 +141,7 @@ const Contact = () => {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                                className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-bold hover:shadow-[0_0_20px_rgba(var(--primary),0.4)] transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed hover:scale-[1.02]"
                             >
                                 {isSubmitting ? (
                                     <>

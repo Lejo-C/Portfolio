@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
-import profileImg from '../assets/Lejo.jpg';
+import profileImg from '../assets/Lejo.png';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -19,6 +19,7 @@ const Header = () => {
         { name: 'Home', href: '#home' },
         { name: 'About', href: '#about' },
         { name: 'Projects', href: '#projects' },
+        { name: 'Pricing', href: '#pricing' },
         { name: 'Certifications', href: '#certifications' },
         { name: 'Contact', href: '#contact' },
     ];
@@ -29,7 +30,7 @@ const Header = () => {
                 }`}
         >
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+                <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-primary via-purple-400 to-blue-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
                     Lejo C
                 </a>
 
@@ -84,9 +85,9 @@ const Header = () => {
 export const Hero = () => {
     return (
         <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
-            {/* Background Elements */}
-            <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl -z-10 animate-pulse" />
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl -z-10 animate-pulse delay-1000" />
+            {/* Advanced Background Elements */}
+            <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse mix-blend-screen" />
+            <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[120px] -z-10 animate-pulse delay-700 mix-blend-screen" />
 
             <div className="container mx-auto px-6 text-center flex flex-col items-center">
                 <motion.div
@@ -95,14 +96,14 @@ export const Hero = () => {
                     transition={{ duration: 0.5 }}
                     className="mb-8 relative"
                 >
-                    <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl relative z-10">
+                    <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-[6px] border-background shadow-[0_0_40px_rgba(var(--primary),0.3)] relative z-10 m-auto ring-4 ring-primary/30">
                         <img
                             src={profileImg}
                             alt="Lejo C"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-700 cursor-pointer"
                         />
                     </div>
-                    <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl -z-10 animate-pulse"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-primary to-blue-500 rounded-full blur-2xl -z-10 opacity-40 animate-pulse"></div>
                 </motion.div>
 
                 <motion.div
@@ -110,27 +111,27 @@ export const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <h2 className="text-xl md:text-2xl font-medium text-primary mb-4">Hello, I'm</h2>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                    <h2 className="text-xl md:text-2xl font-medium text-primary tracking-wide mb-4 uppercase text-sm">Hello, I'm</h2>
+                    <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/50">
                         Lejo C
                     </h1>
-                    <h3 className="text-2xl md:text-4xl text-foreground/80 mb-8 font-light">
-                        Full Stack Developer <span className="text-primary">|</span> MERN
+                    <h3 className="text-2xl md:text-4xl text-foreground/80 mb-8 font-light flex items-center justify-center gap-3">
+                        Full Stack Developer <span className="text-primary opacity-50">|</span> <span className="font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-primary">MERN</span>
                     </h3>
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-                        Love to learn new skills and build scalable solutions.
+                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+                        I craft dynamic, high-performance web applications with a focus on seamless user experiences, scalable architecture, and cutting-edge design.
                     </p>
 
                     <div className="flex justify-center space-x-6">
-                        <a href="#contact" className="px-8 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                        <a href="#contact" className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold hover:shadow-[0_0_20px_rgba(0,0,0,0.4)] hover:scale-105 transition-all duration-300">
                             Get in Touch
                         </a>
-                        <a href="#projects" className="px-8 py-3 border border-border bg-card hover:bg-accent hover:text-accent-foreground rounded-full font-medium transition-colors">
+                        <a href="#projects" className="px-8 py-4 border border-border bg-card/50 backdrop-blur-md hover:bg-white/10 hover:text-foreground rounded-full font-semibold hover:border-primary/50 transition-all duration-300">
                             View Work
                         </a>
                     </div>
 
-                    <div className="mt-16 flex justify-center space-x-8 text-muted-foreground">
+                    <div className="mt-16 mb-5 flex justify-center space-x-8 text-muted-foreground">
                         <a href="https://github.com/Lejo-C" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
                             <Github size={28} />
                         </a>
