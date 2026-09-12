@@ -1,51 +1,20 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
-import portfolio from '../assets/portfolio.png';
-import ncc from '../assets/NCC.png';
+import gym from "../assets/gym.png";
 
 const Projects = () => {
     const projects = [
+       
         {
-            title: 'Exam Platform',
-            description: 'A modular exam creation and management system. Allows instructors to create exams and students to take them with real-time results.',
-            tags: ['React', 'Node.js', 'MongoDB'],
-            image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1000',
-            github: 'https://github.com/Lejo-C/Online_Assignment_Platform',
-            demo: 'https://online-assignment-platform.netlify.app/',
-        },
-        {
-            title: 'Expense Tracker',
-            description: 'A simple yet powerful Income Expense Calculator with CRUD operations.',
-            tags: ['HTML', 'CSS', 'JavaScript'],
-            image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=1000',
-            github: 'https://github.com/Lejo-C/todoList',
-            demo: 'https://todolist3027.netlify.app/',
-        },
-        {
-            title: 'Portfolio',
-            description: 'A simple Portfolio website built with React and Tailwind CSS for myself.',
-            tags: ['React', 'Tailwind CSS'],
-            image: portfolio,
-            github: 'https://github.com/Lejo-C/Portfolio',
-            demo: 'https://portfolio-lejo-c.netlify.app/',
-        },
-        {
-            title: 'E-Commerce',
-            description: 'A E-Commerce website built with React, Tailwind CSS, Node.js, Mongo DB.',
-            tags: ['React', 'Node.js', 'Mongo DB', 'Tailwind CSS'],
-            image: 'https://media.licdn.com/dms/image/v2/D4D22AQFOVnVqxVz6dg/feedshare-shrink_1280/B4DZrqOA_PIEAo-/0/1764866134140?e=1766620800&v=beta&t=NveoX7RHUKXRCX4crrE-2NV79gZ17xu4u55demH_Mws',
-            github: 'https://github.com/Lejo-C/E-Commerce',
-            demo: 'https://e-commerce-iet3.onrender.com/',
-        },
-        {
-            title: 'Ncc Portal',
-            description: 'A portal where we can manage our NCC activities.',
-            tags: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-            image: ncc,
-            github: 'https://github.com/Lejo-C/Ncc_Portal-/tree/master',
-            demo: 'https://ncc-portal.onrender.com/',
-        },
+    "title": "Iron & Oak Gym",
+    "description": "Business Website for a Fitness Center in Trivandrum",
+    "image": gym,
+    "demo": "https://symphonious-kangaroo-21f3e8.netlify.app/",
+    "github": "https://github.com/Lejo-C/Business/tree/main/GYM",
+    "tags": ["Business Website", "React", "TailwindCSS"]
+}
+        
     ];
 
     return (

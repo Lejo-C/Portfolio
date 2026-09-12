@@ -21,7 +21,7 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
-                >
+                >43
                     <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/50">About Me</h2>
                     <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-blue-500 mx-auto rounded-full blur-[1px]"></div>
                 </motion.div>
@@ -39,7 +39,11 @@ const About = () => {
                             <div className="mb-6 relative z-10">
                                 <h4 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500 mb-2">Rajalakshmi Engineering College</h4>
                                 <p className="text-foreground/90 font-medium text-lg">Department of AI & DS</p>
-                                <p className="text-muted-foreground text-sm mt-2 flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary/70"></div> Focused on Data Structures, Algorithms, and Web Development.</p>
+                                <div className="text-muted-foreground text-sm mt-2 flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-primary/70"></div>
+                                <p>Focused on Data Structures, Algorithms, and Web Development.</p>
+                                </div>
+
                             </div>
                             <p className="text-muted-foreground/90 leading-relaxed relative z-10 text-[1.05rem]">
                                 I am a passionate developer with a strong foundation in Artificial Intelligence and Data Science.
