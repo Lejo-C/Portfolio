@@ -2,16 +2,26 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import gym from "../assets/gym.png";
+import ecommerces from "../assets/ecommerces.png";
 
 const Projects = () => {
     const projects = [
        
         {
-    "title": "Iron & Oak Gym",
+    "title": "PRO Gym",
     "description": "Business Website for a Fitness Center in Trivandrum",
     "image": gym,
     "demo": "https://symphonious-kangaroo-21f3e8.netlify.app/",
     "github": "https://github.com/Lejo-C/Business/tree/main/GYM",
+    "tags": ["Business Website", "React", "TailwindCSS"]
+},
+
+{
+      "title": "E-Commerces",
+    "description": "A morden E-Commerces site with all business logics",
+    "image": ecommerces,
+    "demo": "https://ecommerces2323.netlify.app/",
+    "github": "https://github.com/Lejo-C/Business/tree/main/ecommerces",
     "tags": ["Business Website", "React", "TailwindCSS"]
 }
         
