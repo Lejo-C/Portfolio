@@ -3,13 +3,15 @@ import { motion } from 'motion/react';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import gym from "../assets/gym.png";
 import ecommerces from "../assets/ecommerces.png";
+import saas from "../assets/saas.png";
+
 
 const Projects = () => {
     const projects = [
        
         {
-    "title": "PRO Gym",
-    "description": "Business Website for a Fitness Center in Trivandrum",
+    "title": "PRO GYM → Marketing / Landing Page",
+    "description": "A modern, high-impact landing page for a premium fitness center, designed to showcase memberships, training programs, facilities, and testimonials. The site uses strong visual hierarchy, responsive layouts, smooth motion, and polished interactive sections to create an energetic experience.",
     "image": gym,
     "demo": "https://symphonious-kangaroo-21f3e8.netlify.app/",
     "github": "https://github.com/Lejo-C/Business/tree/main/GYM",
@@ -17,12 +19,21 @@ const Projects = () => {
 },
 
 {
-      "title": "E-Commerces",
-    "description": "A morden E-Commerces site with all business logics",
+      "title": "Northfield → E-commerce / Product Experience",
+    "description": "A premium home and lifestyle e-commerce experience built around product discovery and a clean shopping flow. It includes a responsive product catalog, category filtering, product details, cart management, checkout flow, and polished UI interactions with a strong focus on usability.",
     "image": ecommerces,
     "demo": "https://ecommerces2323.netlify.app/",
     "github": "https://github.com/Lejo-C/Business/tree/main/ecommerces",
     "tags": ["Business Website", "React", "TailwindCSS"]
+},
+
+{
+    "title":"ClientFlow → SaaS / Business Application",
+    "description":"A frontend SaaS platform designed for agencies to manage their business from one workspace. It includes sales pipelines, client management, projects, tasks, invoices, analytics, interactive charts, search, and responsive dashboard layouts. The interface focuses on clear data presentation and practical workflows rather than decorative UI.",
+    "image":saas,
+    "demo":"https://saasdashboarddemo001.netlify.app/",
+    "github":"https://github.com/Lejo-C/Business/tree/main/Saas",
+    "tags":["React, Tailwind CSS, Recharts, Lucide React"]
 }
         
     ];
