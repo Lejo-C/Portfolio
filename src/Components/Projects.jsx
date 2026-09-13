@@ -1,46 +1,55 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import React from "react";
+import { motion } from "motion/react";
+import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
+
 import gym from "../assets/gym.png";
 import ecommerces from "../assets/ecommerces.png";
 import saas from "../assets/saas.png";
 
-
 const Projects = () => {
     const projects = [
-       
         {
-    "title": "PRO GYM → Marketing / Landing Page",
-    "description": "A modern, high-impact landing page for a premium fitness center, designed to showcase memberships, training programs, facilities, and testimonials. The site uses strong visual hierarchy, responsive layouts, smooth motion, and polished interactive sections to create an energetic experience.",
-    "image": gym,
-    "demo": "https://symphonious-kangaroo-21f3e8.netlify.app/",
-    "github": "https://github.com/Lejo-C/Business/tree/main/GYM",
-    "tags": ["Business Website", "React", "TailwindCSS"]
-},
+            title: "PRO GYM",
+            category: "Marketing / Landing Page",
+            description:
+                "A high-impact fitness website designed to showcase memberships, training programs, facilities, and drive new enquiries.",
+            image: gym,
+            demo: "https://symphonious-kangaroo-21f3e8.netlify.app/",
+            github:
+                "https://github.com/Lejo-C/Business/tree/main/GYM",
+            tags: ["React", "Tailwind CSS", "Responsive UI"],
+        },
 
-{
-      "title": "Northfield → E-commerce / Product Experience",
-    "description": "A premium home and lifestyle e-commerce experience built around product discovery and a clean shopping flow. It includes a responsive product catalog, category filtering, product details, cart management, checkout flow, and polished UI interactions with a strong focus on usability.",
-    "image": ecommerces,
-    "demo": "https://ecommerces2323.netlify.app/",
-    "github": "https://github.com/Lejo-C/Business/tree/main/ecommerces",
-    "tags": ["Business Website", "React", "TailwindCSS"]
-},
+        {
+            title: "Northfield",
+            category: "E-commerce / Product Experience",
+            description:
+                "A premium home and lifestyle storefront with product discovery, filtering, product details, cart, and checkout flows.",
+            image: ecommerces,
+            demo: "https://ecommerces2323.netlify.app/",
+            github:
+                "https://github.com/Lejo-C/Business/tree/main/ecommerces",
+            tags: ["React", "Tailwind CSS", "E-commerce"],
+        },
 
-{
-    "title":"ClientFlow → SaaS / Business Application",
-    "description":"A frontend SaaS platform designed for agencies to manage their business from one workspace. It includes sales pipelines, client management, projects, tasks, invoices, analytics, interactive charts, search, and responsive dashboard layouts. The interface focuses on clear data presentation and practical workflows rather than decorative UI.",
-    "image":saas,
-    "demo":"https://saasdashboarddemo001.netlify.app/",
-    "github":"https://github.com/Lejo-C/Business/tree/main/Saas",
-    "tags":["React, Tailwind CSS, Recharts, Lucide React"]
-}
-        
+        {
+            title: "ClientFlow",
+            category: "SaaS / Business Application",
+            description:
+                "A business dashboard for managing leads, clients, projects, tasks, invoices, and analytics from one workspace.",
+            image: saas,
+            demo: "https://saasdashboarddemo001.netlify.app/",
+            github:
+                "https://github.com/Lejo-C/Business/tree/main/Saas",
+            tags: ["React", "Tailwind CSS", "Recharts", "Lucide"],
+        },
     ];
 
     return (
-        <section id="projects" className="py-20 bg-background">
-            <div className="container mx-auto px-6 ">
+        <section id="projects" className="py-24 bg-background">
+            <div className="container mx-auto px-6">
+
+                {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -48,61 +57,275 @@ const Projects = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/50">Featured Projects</h2>
-                    <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-blue-500 mx-auto rounded-full blur-[1px] mb-6"></div>
-                    <p className="text-muted-foreground max-w-2xl mx-auto">
-                        Here are some of the projects I've worked on. Each one presented unique challenges and learning opportunities.
+                    <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+                        Selected Work
+                    </p>
+
+                    <h2 className="text-4xl md:text-5xl font-black tracking-tight text-foreground mb-5">
+                        Featured Projects
+                    </h2>
+
+                    <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-6" />
+
+                    <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                        Three projects across different types of web experiences,
+                        from marketing websites to e-commerce and SaaS applications.
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center">
+
+                {/* Projects Grid */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 max-w-7xl mx-auto">
+
                     {projects.map((project, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7, delay: index * 0.15, type: 'spring', bounce: 0.4 }}
-                            className="group relative rounded-3xl overflow-hidden bg-card/60 backdrop-blur-xl border border-border/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(var(--primary),0.05)] hover:shadow-[0_8px_30px_rgba(var(--primary),0.2)] transition-all duration-500 hover:-translate-y-3"
+                        <motion.article
+                            key={project.title}
+                            initial={{
+                                opacity: 0,
+                                y: 35,
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                            }}
+                            viewport={{
+                                once: true,
+                                margin: "-80px",
+                            }}
+                            transition={{
+                                duration: 0.55,
+                                delay: index * 0.1,
+                                ease: [0.22, 1, 0.36, 1],
+                            }}
+                            className="
+                                group
+                                relative
+                                flex
+                                flex-col
+                                overflow-hidden
+                                rounded-3xl
+                                bg-card
+                                border
+                                border-border
+                                transition-all
+                                duration-300
+                                hover:-translate-y-2
+                                hover:border-primary/40
+                                hover:shadow-xl
+                            "
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            
-                            <div className="relative h-56 overflow-hidden rounded-t-3xl border-b border-border/50">
-                                <div className="absolute inset-0 bg-primary/20 backdrop-blur-[2px] group-hover:bg-transparent group-hover:backdrop-blur-0 transition-all duration-500 z-10" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60 z-[5]"></div>
+
+                            {/* Project Image */}
+                            <div className="
+                                relative
+                                h-60
+                                overflow-hidden
+                                bg-background
+                                border-b
+                                border-border
+                            ">
+
                                 <img
                                     src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                                    alt={`${project.title} project preview`}
+                                    className="
+                                        w-full
+                                        h-full
+                                        object-cover
+                                        transition-transform
+                                        duration-700
+                                        ease-out
+                                        group-hover:scale-105
+                                    "
                                 />
+
+                                {/* Image Overlay */}
+                                <div className="
+                                    absolute
+                                    inset-0
+                                    bg-black/0
+                                    group-hover:bg-black/10
+                                    transition-colors
+                                    duration-300
+                                " />
+
+                                {/* Quick Demo Button */}
+                                <a
+                                    href={project.demo}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`Open ${project.title} live demo`}
+                                    className="
+                                        absolute
+                                        top-4
+                                        right-4
+                                        w-10
+                                        h-10
+                                        rounded-full
+                                        bg-background
+                                        text-foreground
+                                        flex
+                                        items-center
+                                        justify-center
+                                        opacity-0
+                                        translate-y-2
+                                        group-hover:opacity-100
+                                        group-hover:translate-y-0
+                                        transition-all
+                                        duration-300
+                                        shadow-lg
+                                        hover:bg-primary
+                                        hover:text-primary-foreground
+                                    "
+                                >
+                                    <ArrowUpRight size={18} />
+                                </a>
+
                             </div>
 
-                            <div className="p-8 relative z-20">
-                                <h3 className="text-2xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70 group-hover:from-primary group-hover:to-purple-400 transition-all duration-300 tracking-tight">{project.title}</h3>
-                                <p className="text-muted-foreground text-sm mb-6 leading-relaxed line-clamp-3">
+
+                            {/* Project Content */}
+                            <div className="
+                                p-7
+                                flex
+                                flex-col
+                                flex-1
+                            ">
+
+                                {/* Category */}
+                                <span className="
+                                    text-primary
+                                    text-xs
+                                    font-semibold
+                                    uppercase
+                                    tracking-[0.14em]
+                                    mb-3
+                                ">
+                                    {project.category}
+                                </span>
+
+
+                                {/* Project Title */}
+                                <h3 className="
+                                    text-2xl
+                                    font-bold
+                                    text-foreground
+                                    tracking-tight
+                                    mb-3
+                                    transition-colors
+                                    duration-300
+                                    group-hover:text-primary
+                                ">
+                                    {project.title}
+                                </h3>
+
+
+                                {/* Description */}
+                                <p className="
+                                    text-sm
+                                    text-muted-foreground
+                                    leading-relaxed
+                                    mb-6
+                                ">
                                     {project.description}
                                 </p>
 
-                                <div className="flex flex-wrap gap-2 mb-8">
-                                    {project.tags.map((tag, i) => (
-                                        <span key={i} className="px-4 py-1.5 bg-primary/10 text-primary text-xs rounded-full font-semibold tracking-wide border border-primary/20">
+
+                                {/* Technology Tags */}
+                                <div className="
+                                    flex
+                                    flex-wrap
+                                    gap-2
+                                    mb-7
+                                ">
+                                    {project.tags.map((tag) => (
+                                        <span
+                                            key={tag}
+                                            className="
+                                                px-3
+                                                py-1.5
+                                                rounded-lg
+                                                border
+                                                border-border
+                                                bg-background
+                                                text-muted-foreground
+                                                text-xs
+                                                font-medium
+                                            "
+                                        >
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
 
-                                <div className="flex justify-between items-center pt-5 border-t border-border/50">
-                                    <a href={project.github} className="flex items-center text-sm font-semibold text-muted-foreground hover:text-primary transition-colors group/link p-2 -ml-2 rounded-lg hover:bg-primary/5">
-                                        <Github size={18} className="mr-2 group-hover/link:scale-110 transition-transform" /> Code
+
+                                {/* Bottom Actions */}
+                                <div className="
+                                    mt-auto
+                                    pt-5
+                                    border-t
+                                    border-border
+                                    flex
+                                    items-center
+                                    justify-between
+                                ">
+
+                                    {/* GitHub */}
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="
+                                            inline-flex
+                                            items-center
+                                            gap-2
+                                            text-sm
+                                            font-semibold
+                                            text-muted-foreground
+                                            hover:text-foreground
+                                            transition-colors
+                                        "
+                                    >
+                                        <Github size={17} />
+                                        Source
                                     </a>
-                                    <a href={project.demo} className="flex items-center text-sm font-semibold text-foreground bg-primary/10 hover:bg-primary hover:text-primary-foreground px-4 py-2 rounded-xl transition-all duration-300">
-                                        Live Demo <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+
+
+                                    {/* Live Demo */}
+                                    <a
+                                        href={project.demo}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="
+                                            inline-flex
+                                            items-center
+                                            gap-2
+                                            px-4
+                                            py-2.5
+                                            rounded-xl
+                                            bg-primary
+                                            text-primary-foreground
+                                            text-sm
+                                            font-semibold
+                                            transition-all
+                                            duration-300
+                                            hover:brightness-110
+                                            hover:shadow-lg
+                                        "
+                                    >
+                                        Live Demo
+                                        <ExternalLink size={16} />
                                     </a>
+
                                 </div>
+
                             </div>
-                        </motion.div>
+
+                        </motion.article>
                     ))}
+
                 </div>
+
             </div>
         </section>
     );
